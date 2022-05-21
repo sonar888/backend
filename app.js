@@ -3,6 +3,8 @@ const bodyParser = require('body-parser')
 const mongoose = require('mongoose');
 const userRoutes = require('./routes/user');
 const saucesRoutes = require('./routes/sauces');
+const path = require('path');
+
 mongoose.connect('mongodb+srv://Evelyne:Saphir162@cluster0.sfddy.mongodb.net/myFirstDatabase?retryWrites=true&w=majority',
   { useNewUrlParser: true,
     useUnifiedTopology: true })
@@ -21,6 +23,8 @@ app.use((req, res, next) => {
   });
 
   app.use(bodyParser.json())
+  app.use('/images', express.static(path.join(__dirname, 'images')));
+  
 
   app.use('/api/auth', userRoutes);
   app.use('/api/sauces', saucesRoutes);
