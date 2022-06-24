@@ -79,7 +79,7 @@ exports.modifySauce = (req, res, next) => {
           break;
 
           case 0 : console.log("0");
-          return res.status(409 ).json({message: 'The request could not be completed due to a conflict with the current state of the resource'})
+          return res.status(409).json({message: 'The request could not be completed due to a conflict with the current state of the resource'})
         }
 
       } else if (sauce.usersLiked.includes(userId)) {
@@ -130,7 +130,7 @@ exports.modifySauce = (req, res, next) => {
 
      
   
-        console.log(userId, sauce.name)
+        // console.log(userId, sauce.name)
 
     }
 
@@ -145,52 +145,3 @@ exports.modifySauce = (req, res, next) => {
      
 
    
-  //   Sauce.findById(req.params.id )
-  //   .then(() => {
-  //   const likeObject = JSON.parse(req.body.sauce);
-  // //   const like = new Sauce({
-  // //     ...likeObject
-      
-  // // });
-  //   // const userId = sauceObject.userId
-  //   // const like = sauceObject.like
-
-  //   console.log(likeObject)
-
-  //   })
-    
-    
-    // sauce.save()
-    //     .then(sauce => res.status(201).json(sauce))
-    //     .catch(error => res.status(400).json({ error }));
-
-    //await sauce findbyID
-    //récupérer le user id et like dans le body
-    // si user Id est présent dqns userliked; alors supprimer dans user like, sinon supprimer dans user dislike
-        //faire un recherhche dans tableaux et supprimer dans le tableaux dans lequel il existe
-    //mettre à jour la sauce
-    //  Sauce.findById(req.params.id)
-    // .then( sauce => {
-    //   if (like === '1') {
-    //     sauce.likes += 1 
-    //     sauce.usersLiked.push(userId)
-    //     console.log("He likes!")
-    //     res.status(200).json(usersLiked)
-    //   } else if ( like === '-1') {
-    //     sauce.dislikes += 1 
-    //     sauce.usersDisliked.push(userId)
-    //     console.log("!")
-    //     console.log("He dislikes!")
-    //     res.status(200).json(usersDisliked)
-    //   } else if (like ==='0') {
-    //     // 
-        // res.status(200).json({ message: sauceObject})
-      // }
-      
-
-
-
-
-    // })
-    // .catch(error => res.status(400).json({ error }))
- 
